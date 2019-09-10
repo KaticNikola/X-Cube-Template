@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/X-Cube-Template/static/css/main.f7f9231a.chunk.css",
+    "main.css": "/X-Cube-Template/static/css/main.9360524d.chunk.css",
     "main.js": "/X-Cube-Template/static/js/main.b4af69b8.chunk.js",
     "main.js.map": "/X-Cube-Template/static/js/main.b4af69b8.chunk.js.map",
     "runtime~main.js": "/X-Cube-Template/static/js/runtime~main.0404bc0b.js",
@@ -8,9 +8,9 @@
     "static/js/2.215d8f95.chunk.js": "/X-Cube-Template/static/js/2.215d8f95.chunk.js",
     "static/js/2.215d8f95.chunk.js.map": "/X-Cube-Template/static/js/2.215d8f95.chunk.js.map",
     "index.html": "/X-Cube-Template/index.html",
-    "precache-manifest.0c02d774c37a64d551229488a02df363.js": "/X-Cube-Template/precache-manifest.0c02d774c37a64d551229488a02df363.js",
+    "precache-manifest.64f73a3f0778b40e2f0595ff8783f223.js": "/X-Cube-Template/precache-manifest.64f73a3f0778b40e2f0595ff8783f223.js",
     "service-worker.js": "/X-Cube-Template/service-worker.js",
-    "static/css/main.f7f9231a.chunk.css.map": "/X-Cube-Template/static/css/main.f7f9231a.chunk.css.map",
+    "static/css/main.9360524d.chunk.css.map": "/X-Cube-Template/static/css/main.9360524d.chunk.css.map",
     "static/media/Template1.scss": "/X-Cube-Template/static/media/online-marketing-hIgeoQjS_iE-unsplash.7e4694e6.jpg"
   }
 }

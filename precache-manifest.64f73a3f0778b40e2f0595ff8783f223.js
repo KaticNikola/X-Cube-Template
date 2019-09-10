@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ce27564fb06b1e155f8ffddff86eb768",
+    "revision": "f6d228d1a4ccec52d099c6242dc84da7",
     "url": "/X-Cube-Template/index.html"
   },
   {
-    "revision": "2e09dd03336f297cb208",
-    "url": "/X-Cube-Template/static/css/main.f7f9231a.chunk.css"
+    "revision": "04e67c86e77edb5cbeb0",
+    "url": "/X-Cube-Template/static/css/main.9360524d.chunk.css"
   },
   {
     "revision": "97c6da061a823bbfd598",
     "url": "/X-Cube-Template/static/js/2.215d8f95.chunk.js"
   },
   {
-    "revision": "2e09dd03336f297cb208",
+    "revision": "04e67c86e77edb5cbeb0",
     "url": "/X-Cube-Template/static/js/main.b4af69b8.chunk.js"
   },
   {
