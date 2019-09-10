@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/X-Cube-Template/precache-manifest.64f73a3f0778b40e2f0595ff8783f223.js"
+  "/X-Cube-Template/precache-manifest.36af4627f364e47097e3d000311838ec.js"
 );
 
 self.addEventListener('message', (event) => {
