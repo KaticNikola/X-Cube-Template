@@ -11,7 +11,7 @@ $break-large: 1200px;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    min-height: 90vh;
+    max-height: 95vh;
     background-image: linear-gradient(to right bottom, rgba(28, 23, 78, 0.904), rgba(2, 150, 153, 0.84)),
       url("../../../assets/img/online-marketing-hIgeoQjS_iE-unsplash.jpg");
     background-repeat: no-repeat;
@@ -24,6 +24,7 @@ $break-large: 1200px;
 
     @media screen and (max-width: $break-medium2) {
       min-height: 90vh;
+      
     }
 
     .content {
@@ -53,12 +54,20 @@ $break-large: 1200px;
         padding: 50px;
         align-self: center;
       }
+      @media screen and (max-width: $break-small) {
+       padding: 0;
+      }
 
       > * {
         margin: 20px 30px;
         @media screen and (max-width: $break-medium) {
           padding: 20px;
           text-align: center;
+        
+        }
+        @media screen and (max-width: $break-small) {
+          margin:10px 0;
+          padding: 0;
         }
       }
       &_main-title {
@@ -66,14 +75,19 @@ $break-large: 1200px;
           text-transform: uppercase;
         }
       }
-      &_description {
-      }
-
+      
       &_button {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-around;
+        @media screen and (max-width: $break-small) {
+          flex-direction: column;
+          align-items: center;
+          *{
+            margin: 10px 5px;
+          }
+        }      
       }
     }
     &-video {
@@ -85,6 +99,7 @@ $break-large: 1200px;
       @media screen and (max-width: $break-small) {
         padding: 0;
       }
+      
     }
 
     &-svg {
@@ -182,7 +197,7 @@ $break-large: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 120vh;
+  max-height: 120vh;
 
   background-image: linear-gradient(to right bottom, rgba(28, 23, 78, 0.904), rgba(2, 150, 153, 0.84)),
     url("../../../assets/img/arseny-togulev-DE6rYp1nAho-unsplash\ \(1\).jpg");
@@ -211,7 +226,8 @@ $break-large: 1200px;
     }
   }
   &-content {
-    margin: 40px 0px;
+    margin: 40px 50px;
+    width: 70%;
     &_cards {
       color: #fff;
       text-align: center;

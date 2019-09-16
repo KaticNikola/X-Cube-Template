@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+
+
 import Header from './sections/Header'
 import Offers from './sections/Offers'
 import Boxies from './sections/Boxies'
@@ -21,7 +23,6 @@ export class Template1 extends Component {
                 <Contact />
                 <GetStarted />
                 <Footer />
-
             </div>
         )
     }

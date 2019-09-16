@@ -1,12 +1,21 @@
-import React, { Component } from 'react'
 
-export class Icon extends Component {
-    render() {
-        const { icon } = this.props;
-        return (
-            <i className={icon} />
-        )
+import React from 'react'
+
+const Icon = ({
+    icon,
+    fontSize,
+    color,
+    textAlign,
+}) => {
+    const style = {
+        fontSize,
+        color,
+        textAlign,
     }
+    return (
+        <i style={style} className={icon} />
+    )
 }
 
 export default Icon
+

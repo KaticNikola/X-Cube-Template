@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import { Consumer } from '../../../../templateContext/TemplateContext';
+
 import SecondaryTitle from '../../../../components/secondaryTitle/SecondaryTitle'
 import Description from '../../../../components/description/Description'
 import Button from '../../../../components/button/Button'
@@ -9,144 +11,138 @@ import SVGBoxies from '../../../../components/SVGBoxies/SVGBoxies'
 
 
 export class Boxies extends Component {
-    render() {
-        return (
-            <div className="boxies" style={{clipPath: 'url(#svgBox)'}}>
-                <div className="boxies-title column60">
-                    <div className="boxies-title_description">
-                        <Description desc="WHY TRUST US ?" />
-                    </div>
-                    <div className="boxies-title_title">
-                        <SecondaryTitle title='HIGH QUALITY STANDARDS THAT SET US APART' />
-                    </div>
-                </div>
-
-                <div className="boxies-content">
-                    <div className="boxies-content_cards column80">
-                        <div className="boxies-card">
-                            <div className="boxies-card_icon">
-                                <Icon icon='far fa-check-circle' />
-                            </div>
-                            <div className="boxies-card_title">
-                                <SecondaryTitle title="Excepteur sint" />
-                            </div>
-                            <div className="boxies-card_descripiton">
-                                <Description desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-                            </div>
-
-                        </div>
-
-                        <div className="boxies-card">
-                            <div className="boxies-card_icon">
-                                <Icon icon='far fa-check-circle' />
-                            </div>
-                            <div className="boxies-card_title">
-                                <SecondaryTitle title="Consectetur adipiscing" />
-                            </div>
-                            <div className="boxies-card_descripiton">
-                                <Description desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-
-                            </div>
-
-                        </div>
-
-                        <div className="boxies-card">
-                            <div className="boxies-card_icon">
-                                <Icon icon='far fa-check-circle' />
-                            </div>
-                            <div className="boxies-card_title">
-                                <SecondaryTitle title="Eiusmod tempor" />
-                            </div>
-                            <div className="boxies-card_descripiton">
-                                <Description desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-
-                            </div>
-
-                        </div>
-
-                        <div className="boxies-card">
-                            <div className="boxies-card_icon">
-                                <Icon icon='far fa-check-circle' />
-                            </div>
-                            <div className="boxies-card_title">
-                                <SecondaryTitle title="Proident esit" />
-                            </div>
-                            <div className="boxies-card_descripiton">
-                                <Description desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-
-                            </div>
-
-                        </div>
-
-                        <div className="boxies-card">
-                            <div className="boxies-card_icon">
-                                <Icon icon='far fa-check-circle' />
-                            </div>
-                            <div className="boxies-card_title">
-                                <SecondaryTitle title="Dolore magna" />
-                            </div>
-                            <div className="boxies-card_descripiton">
-                                <Description desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-                            </div>
-
-                        </div>
-
-                        <div className="boxies-card">
-                            <div className="boxies-card_icon">
-                                <Icon icon='far fa-check-circle' />
-                            </div>
-                            <div className="boxies-card_title">
-                                <SecondaryTitle title="Mollit anim id" />
-                            </div>
-                            <div className="boxies-card_descripiton">
-                                <Description desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-
-                            </div>
-
-                        </div>
-
-                        <div className="boxies-card">
-                            <div className="boxies-card_icon">
-                                <Icon icon='far fa-check-circle' />
-                            </div>
-                            <div className="boxies-card_title">
-                                <SecondaryTitle title="Duis aute irure" />
-                            </div>
-                            <div className="boxies-card_descripiton">
-                                <Description desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-
-                            </div>
-
-                        </div>
-
-                        <div className="boxies-card">
-                            <div className="boxies-card_icon">
-                                <Icon icon='far fa-check-circle' />
-                            </div>
-                            <div className="boxies-card_title">
-                                <SecondaryTitle title="Velit esse" />
-                            </div>
-                            <div className="boxies-card_descripiton">
-                                <Description desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-
-                            </div>
-
-                        </div>
 
 
+	state = {
+		
+	}
+	render() {
+		
 
-                    </div>
-                </div>
-                <div className="boxies-btn btn-white">
-                    <Button content="Learn More" />
-                </div>
+		return (
+			<Consumer>
+				{value => {
+					const { title, description, box1, box2, box3, box4, box5, box6, box7, box8, button } = value.boxies;
+					return (
+						<div className="boxies" style={{ clipPath: 'url(#svgBox)' }}>
+							<div className="boxies-title column60">
+								<div className="boxies-title_description">
+									<Description {...description} />
+								</div>
+								<div className="boxies-title_title">
+									<SecondaryTitle {...title} />
+								</div>
+							</div>
 
-                <div className="boxies-svg">
-                    <SVGBoxies />
-                </div>
-            </div>
-        )
-    }
+							<div className="boxies-content">
+								<div className="boxies-content_cards column80">
+									<div className="boxies-card">
+										<div className="boxies-card_icon">
+											<Icon  {...box1.icon} />
+										</div>
+										<div className="boxies-card_title">
+											<SecondaryTitle {...box1.title} />
+										</div>
+										<div className="boxies-card_descripiton">
+											<Description {...box1.description} />
+										</div>
+									</div>
+									<div className="boxies-card">
+										<div className="boxies-card_icon">
+											<Icon  {...box2.icon} />
+										</div>
+										<div className="boxies-card_title">
+											<SecondaryTitle {...box2.title} />
+										</div>
+										<div className="boxies-card_descripiton">
+											<Description {...box2.description} />
+										</div>
+									</div>
+
+									<div className="boxies-card">
+										<div className="boxies-card_icon">
+											<Icon  {...box3.icon} />
+										</div>
+										<div className="boxies-card_title">
+											<SecondaryTitle {...box3.title} />
+										</div>
+										<div className="boxies-card_descripiton">
+											<Description {...box3.description} />
+										</div>
+									</div>
+									<div className="boxies-card">
+										<div className="boxies-card_icon">
+											<Icon  {...box4.icon} />
+										</div>
+										<div className="boxies-card_title">
+											<SecondaryTitle {...box4.title} />
+										</div>
+										<div className="boxies-card_descripiton">
+											<Description {...box4.description} />
+										</div>
+									</div>
+
+									<div className="boxies-card">
+										<div className="boxies-card_icon">
+											<Icon  {...box5.icon} />
+										</div>
+										<div className="boxies-card_title">
+											<SecondaryTitle {...box5.title} />
+										</div>
+										<div className="boxies-card_descripiton">
+											<Description {...box5.description} />
+										</div>
+									</div>
+
+									<div className="boxies-card">
+										<div className="boxies-card_icon">
+											<Icon  {...box6.icon} />
+										</div>
+										<div className="boxies-card_title">
+											<SecondaryTitle {...box6.title} />
+										</div>
+										<div className="boxies-card_descripiton">
+											<Description {...box6.description} />
+										</div>
+									</div>
+									<div className="boxies-card">
+										<div className="boxies-card_icon">
+											<Icon  {...box7.icon} />
+										</div>
+										<div className="boxies-card_title">
+											<SecondaryTitle {...box7.title} />
+										</div>
+										<div className="boxies-card_descripiton">
+											<Description {...box7.description} />
+										</div>
+									</div>
+									<div className="boxies-card">
+										<div className="boxies-card_icon">
+											<Icon  {...box8.icon} />
+										</div>
+										<div className="boxies-card_title">
+											<SecondaryTitle {...box8.title} />
+										</div>
+										<div className="boxies-card_descripiton">
+											<Description {...box8.description} />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div className="boxies-btn btn-white">
+								<Button {...button} />
+							</div>
+
+							<div className="boxies-svg">
+								<SVGBoxies />
+							</div>
+						</div>
+					)
+				}}
+			</Consumer>
+		)
+
+	}
 }
 
 export default Boxies

@@ -1,29 +1,42 @@
 import React, { Component } from 'react'
 
+import { Consumer } from '../../../../templateContext/TemplateContext';
+
 import SecondaryTitle from '../../../../components/secondaryTitle/SecondaryTitle'
 import Description from '../../../../components/description/Description'
 import Button from '../../../../components/button/Button'
 
 export class GetStarted extends Component {
-    render() {
-        return (
-            <div className="getStarted">
-                <div className="getStarted-txt">
-                    <div className="getStarted-txt_title">
-                        <SecondaryTitle title=" GET STARTED TODAY" />
-                    </div>
-                    <div className="getStarted-txt_description">
-                        <Description desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-                    </div>
 
+	state = {
 
-                </div>
-                <div className="getStarted-btn btn-white">
-                    <Button content="Get Started" />
-                </div>
-            </div>
-        )
-    }
+	}
+	render() {
+		
+		return (
+			<Consumer>
+				{value => {
+					const { title, description, button } = value.getStarted;
+					return (
+						<div className="getStarted">
+							<div className="getStarted-txt">
+								<div className="getStarted-txt_title">
+									<SecondaryTitle {...title} />
+								</div>
+								<div className="getStarted-txt_description">
+									<Description {...description} />
+								</div>
+
+							</div>
+							<div className="getStarted-btn btn-white">
+								<Button {...button} />
+							</div>
+						</div>
+					)
+				}}
+			</Consumer>
+		)
+	}
 }
 
 export default GetStarted;
