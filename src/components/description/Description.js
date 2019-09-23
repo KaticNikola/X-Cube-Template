@@ -2,6 +2,7 @@
 import React from 'react'
 
 const Description = ({
+    id,
     content,
     fontSize,
     fontType,
@@ -12,20 +13,22 @@ const Description = ({
     textAlign,
     textDecoration,
     lineHeight,
+    letterSpacing
 }) => {
     const style = {
         fontSize,
-        fontType: fontType,
-        fontWeight: fontWeight,
-        color: color,
-        textTransform: textTransform,
-        fontStyle: fontStyle,
-        textAlign: textAlign,
-        textDecoration: textDecoration,
-        lineHeight: lineHeight,
+        fontType,
+        fontWeight,
+        color,
+        textTransform,
+        fontStyle,
+        textAlign,
+        textDecoration,
+        lineHeight,
+        letterSpacing
     }
     return (
-        <p style={style}>{content}</p>
+        <p id={id} style={style}>{content}</p>
     )
 }
 

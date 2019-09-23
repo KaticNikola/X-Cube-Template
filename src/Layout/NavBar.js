@@ -54,6 +54,11 @@ export class NavBar extends Component {
                             Edit Mode
                         </Link>
                     </li>
+                    <li className="navigation--item">
+                        <Link to='/live-edit/test' className='navigation--item_link' >
+                            TEST
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         )

@@ -1,32 +1,55 @@
 import React, { Component } from 'react'
 
-import { Consumer } from '../../../../templateContext/TemplateContext';
+import { Consumer } from '../../../templateContext/TemplateContext';
 
 import MainTitle from '../../../../components/mainTitle/MainTitle'
 import Description from '../../../../components/description/Description'
 import Button from '../../../../components/button/Button'
 import Video from '../../../../components/video/Video'
 import SVGHeader from '../../../../components/SVGHeader/SVGHeader'
+import { SELECTED_ELEMENT } from '../../../templateContext/TemplateTypes'
+
 
 
 export class Header extends Component {
 	state = {
-		
+
+	}
+
+	handleSelectElement = (dispatch, e) => {
+		let id = e.target.id
+		let actionType = e.target.name
+		//
+		// console.log(id)
+		// console.log(actionType)
+		dispatch({
+			type: SELECTED_ELEMENT,
+			payload: {
+				id,
+				// selectionKey
+			}
+		})
 	}
 
 	render() {
 		return (
 			<Consumer>
 				{value => {
-					const { title, description, buttonLeft,buttonRight } = value.header;
+					const { dispatch } = value;
+					const { title, description, buttonLeft, buttonRight } = value.header;
 					return (
 						<div className="header" style={{ clipPath: 'url(#svgPath)' }}>
 							<div className="content column70">
 								<div className="header-text column50">
-									<div className="header-text_main-title">
-										<MainTitle {...title} />
+									<div
+										onClick={this.handleSelectElement.bind(this, dispatch)}
+										className="header-text_main-title">
+										<MainTitle
+											{...title} />
 									</div>
-									<div className="header-text_description">
+									<div
+										onClick={this.handleSelectElement.bind(this, dispatch)}
+										className="header-text_description">
 										<Description {...description} />
 									</div>
 									<div className="header-text_button">

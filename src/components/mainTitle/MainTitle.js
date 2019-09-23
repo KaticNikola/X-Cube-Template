@@ -2,6 +2,8 @@
 import React from 'react'
 
 const MainTitle = ({
+    id,
+    actionType,
     content,
     fontSize,
     fontType,
@@ -12,6 +14,7 @@ const MainTitle = ({
     textAlign,
     textDecoration,
     lineHeight,
+    letterSpacing
 }) => {
     const style = {
         fontSize,
@@ -23,9 +26,10 @@ const MainTitle = ({
         textAlign: textAlign,
         textDecoration: textDecoration,
         lineHeight: lineHeight,
+        letterSpacing
     }
     return (
-        <h1 style={style}>{content}</h1>
+        <h1 id={id} name={actionType} style={style}  >{content}</h1>
     )
 }
 

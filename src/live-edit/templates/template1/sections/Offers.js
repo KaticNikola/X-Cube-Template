@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Consumer } from '../../../../templateContext/TemplateContext';
+import { Consumer } from '../../../templateContext/TemplateContext';
 
 import SecondaryTitle from '../../../../components/secondaryTitle/SecondaryTitle'
 import Description from '../../../../components/description/Description'

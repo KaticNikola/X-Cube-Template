@@ -23,9 +23,21 @@ const SecondaryTitle = ({
         textAlign: textAlign,
         textDecoration: textDecoration,
         lineHeight: lineHeight,
+
     }
+    // const hover = {
+    //     hover:fontSize,
+    //     fontType: fontType,
+    //     fontWeight: fontWeight,
+    //     color: color,
+    //     textTransform: textTransform,
+    //     fontStyle: fontStyle,
+    //     textAlign: textAlign,
+    //     textDecoration: textDecoration,
+    //     lineHeight: lineHeight,
+    // }
     return (
-        <h2 style={style}>{content}</h2>
+        <h2 style={ style }>{content}</h2>
     )
 }
 
